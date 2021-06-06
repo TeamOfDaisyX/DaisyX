@@ -1,27 +1,11 @@
-# Copyright (C) 2021 TeamDaisyX
-
-
-# This file is part of Daisy (Telegram Bot)
-
-# This program is free software: you can redistribute it and/or modify
-# it under the terms of the GNU Affero General Public License as
-# published by the Free Software Foundation, either version 3 of the
-# License, or (at your option) any later version.
-
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU Affero General Public License for more details.
-
-# You should have received a copy of the GNU Affero General Public License
-# along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl import functions, types
+import asyncio
+from AlainX.events import register as Daisy
+from AlainX import bot as tbot
+from AlainX import ubot
 
-from DaisyX.services.events import register as Daisy
-from DaisyX.services.telethon import tbot
-from DaisyX.services.telethonuserbot import ubot
+
 
 
 async def is_register_admin(chat, user):
@@ -80,7 +64,7 @@ async def _(event):
 
         return
 
-    chat = "@DetectiveInfoBot"
+    chat = "@SangMataInfo_bot"
     uid = reply_message.sender_id
     reply_message.sender
 
@@ -100,14 +84,19 @@ async def _(event):
             #   events.NewMessage(incoming=True, from_users=1706537835)
             # )
 
-            await silently_send_message(conv, f"/detect_id {uid}")
+            await silently_send_message(conv, f"/search_id {uid}")
 
-            # response = await response
-            responses = await silently_send_message(conv, f"/detect_id {uid}")
+            #responses = await silently_send_message(conv, f"/search_id {uid}")
+            await asyncio.sleep(1.7)
+            async for msg in ubot.iter_messages(461843263, limit=4):
+                if not "/search_id" in msg.text:
+                    await tbot.send_message(event.chat_id,msg)
+                else:
+                    pass
         except YouBlockedUserError:
 
-            await event.reply("```Please unblock @DetectiveInfoBot and try again```")
+            await event.reply("```Please unblock @SangMataInfo_bot and try again```")
 
             return
-        await lol.edit(f"{responses.text}")
+        await lol.delete()
         # await lol.edit(f"{response.message.message}")
