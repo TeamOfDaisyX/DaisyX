@@ -25,7 +25,7 @@ import sys
 import rapidjson
 import requests
 
-from DaisyX import DAISY_VERSION, bot, dp
+from DaisyX import DAISY_VERSION, bot, dp, OWNER_ID
 from DaisyX.decorator import COMMANDS_ALIASES, REGISTRED_COMMANDS, register
 from DaisyX.modules import LOADED_MODULES
 from DaisyX.services.mongo import db, mongodb
