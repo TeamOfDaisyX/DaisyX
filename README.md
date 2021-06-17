@@ -44,15 +44,15 @@ Complete guide on deploying @DaisyXBot's clone on Heroku.
 ### Self-hosting (For Devs) ⚔
 ```sh
 # Install Git First (apt-instll git)
-$ git clone https://github.com/TeamDaisyX/DaisyX
+$ git clone https://github.com/TeamOfDaisyX/DaisyX
 $ cd DaisyX
 # Upgrade sources
 $ bash deploy.sh
 # Install All Requirements 
-$ pip(3) install -r requirements.txt
+$ pip3 install -r requirements.txt
 # Rename ./DaisyX/data/bot_conf.yaml.example to bot_conf.yaml and fill
 # Start Bot 
-$ python(3) -m DaisyX
+$ python3 -m DaisyX
 ```
 
 ### Mandatory Vars 📒
