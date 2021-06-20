@@ -401,7 +401,7 @@ STRINGS:
     select_pm_lang: "\n<b>Selecione o seu novo idioma:</b>"
     select_chat_lang: "\n<b>Selecione o novo idioma do chat:</b>"
     crowdin_btn: "🌎 Ajude-nos com a tradução"
-    help_us_translate: "\n\n<a href=\"https://crowdin.com/project/DaisyXx\">🌎 Ajude-nos a melhorar nossas traduções</a>"
+    help_us_translate: "\n<a href=\"https://crowdin.com/project/DaisyXx\">🌎 Ajude-nos a melhorar nossas traduções</a>"
     not_supported_lang: Este idioma não é suportado!
     lang_changed: O idioma foi trocado a <b>{lang_name}</b>.
     see_translators: '👥 Veja os tradutores'
