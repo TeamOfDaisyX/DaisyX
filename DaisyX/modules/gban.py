@@ -45,7 +45,7 @@ async def _(event):
     quew = event.pattern_match.group(1)
     sun = "None"
     if "|" in quew:
-        iid, reasonn = quew.split("|")
+    iid, reasonn = quew.split("|")
     cid = iid.strip()
     reason = reasonn.strip()
     elif "|" not in quew:
