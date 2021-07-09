@@ -1,1 +1,1 @@
-# goto https://github.com/TeamOfDaisyX/DaisyX.git
+# goto https://github.com/TeamDaisyX/DaisyX.git
